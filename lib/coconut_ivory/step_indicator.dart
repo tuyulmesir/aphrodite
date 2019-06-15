@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:landx_app/coconut_ivory/coconut_ivory.dart';
+
+import 'palette.dart';
 
 class _Step {
   final int index;

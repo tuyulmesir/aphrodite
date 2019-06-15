@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:landx_app/coconut_ivory/coconut_ivory.dart';
+
+import 'palette.dart';
 
 typedef CooldownEvent = Future<DateTime> Function();
 

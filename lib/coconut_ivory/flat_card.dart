@@ -1,7 +1,8 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
-import 'package:landx_app/widgets/generic_text/generic_text.dart';
+
+import 'generic_text.dart';
 
 /// A card with zero elevation.
 ///
