@@ -42,7 +42,7 @@ class Screen extends StatelessWidget {
     return Scaffold(
       appBar: appBar,
       body: body,
-      backgroundColor: Palette.of(context).primary[50],
+      backgroundColor: Palette.of(context).primary,
       bottomNavigationBar: bottomNavigationBar,
     );
   }

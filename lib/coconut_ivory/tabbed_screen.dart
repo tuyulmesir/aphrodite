@@ -79,15 +79,29 @@ class _InternalTabbedScreenState extends State<InternalTabbedScreen> {
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Palette.of(context).primary,
-          primaryColor: Colors.white,
+          primaryColor: Colors.black,
           textTheme: TextTheme(
-            caption: TextStyle(color: Colors.white.withOpacity(0.38)),
+            caption: TextStyle(color: Colors.black.withOpacity(0.38)),
           ),
         ),
-        child: BottomNavigationBar(
-          currentIndex: controller.index,
-          onTap: (index) => controller.index = index,
-          items: screens.map((screen) => screen.navBarItem).toList(),
+        child: Container(
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(
+              color: Color(0x99000000),
+              blurRadius: 71, 
+              spreadRadius: -19,
+              offset: Offset(
+                0,
+                19,
+              ),
+            )
+          ]),
+          child: BottomNavigationBar(
+            elevation: 0,
+            currentIndex: controller.index,
+            onTap: (index) => controller.index = index,
+            items: screens.map((screen) => screen.navBarItem).toList(),
+          ),
         ),
       ),
     );
@@ -119,7 +133,7 @@ abstract class NavigableScreen {
   NavigableScreen({
     this.drawer,
     this.endDrawer,
-    @required this.appBar,
+    this.appBar,
     @required this.body,
     @required this.navBarItem,
   });

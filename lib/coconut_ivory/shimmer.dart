@@ -4,9 +4,9 @@ import 'package:shimmer/shimmer.dart' as shimmer;
 import 'palette.dart';
 
 Gradient _defaultGradient(BuildContext context) {
-  MaterialColor color = Palette.of(context).primary;
-  Color base = color[200].withOpacity(0.75);
-  Color highlight = color[200].withOpacity(0.95);
+  Color color = Palette.of(context).primary;
+  Color base = color.withOpacity(0.75);
+  Color highlight = color.withOpacity(0.95);
   return LinearGradient(
     colors: <Color>[base, highlight, highlight, base],
     stops: <double>[0.35, 0.48, 0.52, 0.65],

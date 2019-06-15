@@ -23,7 +23,7 @@ class TightChip extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(chipHeight),
-        color: Palette.of(context).primary[100],
+        color: Palette.of(context).primary,
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(

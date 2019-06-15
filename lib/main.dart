@@ -27,7 +27,7 @@ class _AphroditeState extends State<Aphrodite> {
       child: Palette(
         data: paletteData,
         child: MaterialApp(
-          title: 'Calo',
+          title: 'Magic Carpet',
           theme: themeData,
           routes: Routes.routes,
         ),

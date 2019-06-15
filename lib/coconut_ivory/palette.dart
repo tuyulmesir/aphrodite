@@ -40,7 +40,7 @@ class Palette extends StatelessWidget {
 }
 
 class PaletteData {
-  final MaterialColor primary;
+  final Color primary;
   final MaterialAccentColor accent;
 
   final Color success;
@@ -54,7 +54,7 @@ class PaletteData {
   });
   PaletteData.defaultPalette()
       : this(
-          primary: Colors.blue,
+          primary: Colors.white,
           accent: Colors.blueAccent,
           success: Colors.green,
           error: Colors.red,
