@@ -18,11 +18,7 @@ class GenieHeader extends StatelessWidget {
       child: Row(
         children: <Widget>[
           GestureDetector(
-            child: isIntro
-                ? Transform.rotate(angle: -1.5708, child: Icon(Icons.arrow_back_ios))
-                : Icon(
-                    Icons.arrow_back_ios,
-                  ),
+            child: Icon(Icons.arrow_back_ios),
             onTap: () => this.onBack(),
           ),
           SizedBox(width: 15),

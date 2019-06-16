@@ -8,7 +8,7 @@ class PlansTab extends NavigableScreen {
       : super(
           body: PlansScreen(),
           navBarItem: BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
+            icon: Icon(Icons.card_travel),
             title: Container(height: 0),
           ),
         );

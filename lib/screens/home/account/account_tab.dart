@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:magic_carpet/coconut_ivory/coconut_ivory.dart';
 
-import 'discover_screen.dart';
+import 'account_screen.dart';
 
-class DiscoverTab extends NavigableScreen {
-  DiscoverTab()
+class AccountTab extends NavigableScreen {
+  AccountTab()
       : super(
-          body: DiscoverScreen(),
+          body: AccountScreen(),
           navBarItem: BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.account_circle),
             title: Container(height: 0),
           ),
         );

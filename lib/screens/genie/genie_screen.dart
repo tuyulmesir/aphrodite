@@ -31,9 +31,9 @@ class _GenieScreenState extends State<GenieScreen> {
     });
   }
 
-  void setDestination(String destination) {
+  void setDate(DateTime date) {
     setState(() {
-      destination = destination;
+      date = date;
     });
   }
 
@@ -61,7 +61,7 @@ class _GenieScreenState extends State<GenieScreen> {
     } else if (step == 2) {
       return BudgetStep(incrementStep: incrementStep, setBudget: setBudget);
     } else if (step == 3) {
-      return DestinationStep(incrementStep: incrementStep, setDestination: setDestination);
+      return DateStep(incrementStep: incrementStep, setDate: setDate);
     } else {
       return TripThemeStep(incrementStep: incrementStep, setThemes: setThemes);
     }
@@ -70,7 +70,7 @@ class _GenieScreenState extends State<GenieScreen> {
   int step;
   String airport;
   String budget;
-  String destination;
+  DateTime date;
   Map<String, bool> themes;
 
   @override

@@ -15,3 +15,4 @@ export 'tight_chip.dart';
 export 'safe_container.dart';
 export 'magic_button.dart';
 export 'dropdown_formfield.dart';
+export 'labeled_text_input.dart';
