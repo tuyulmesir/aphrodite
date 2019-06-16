@@ -29,4 +29,16 @@ class Heracles extends Model {
         'https://us-central1-magic-carpet-7e58b.cloudfunctions.net/getTrips?start=${start.millisecondsSinceEpoch}');
     return jsonDecode(r.body)[0];
   }
+
+  Future<dynamic> purchaseTrip(String s) async {
+    http.Response r = await http.get(
+        'https://us-central1-magic-carpet-7e58b.cloudfunctions.net/purchaseTrip?start=${start.millisecondsSinceEpoch}&id=$s');
+    return jsonDecode(r.body)[0];
+  }
+
+  Future<dynamic> getPurchased() async {
+    http.Response r = await http.get(
+        'https://us-central1-magic-carpet-7e58b.cloudfunctions.net/getPurchased');
+    return jsonDecode(r.body);
+  }
 }

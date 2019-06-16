@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:magic_carpet/coconut_ivory/coconut_ivory.dart';
+import 'package:magic_carpet/routes.dart';
 
 import 'travel_friends/widgets/travel_friends_body.dart';
 import 'travel_friends/widgets/travel_friends_header.dart';
@@ -24,7 +25,7 @@ class _BookingScreenState extends State<BookingScreen> {
             padding: EdgeInsets.symmetric(horizontal: 40),
             child: MagicButton(
               text: 'PROCEED',
-              callback: () => Navigator.of(context).buyNow,
+              callback: () => Navigator.of(context).pushNamed(Routes.payment),
             ),
           )
         ],

@@ -5,21 +5,18 @@ import 'package:magic_carpet/routes.dart';
 import 'plans_entry_card.dart';
 
 class PlansEntry extends StatelessWidget {
-  final List plans;
+  final dynamic plans;
 
   PlansEntry({this.plans});
 
   Widget _showPlans() {
-    return ListView(
+    print(plans.length);
+    return ListView.separated(
       shrinkWrap: true,
       physics: BouncingScrollPhysics(),
-      children: <Widget>[
-        PlansEntryCard(),
-        SizedBox(width: 30),
-        PlansEntryCard(),
-        SizedBox(width: 30),
-        PlansEntryCard(),
-      ],
+      itemCount: plans.length,
+      itemBuilder: (context, index) => PlansEntryCard(),
+      separatorBuilder: (context, index) => SizedBox(height: 30),
     );
   }
 

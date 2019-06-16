@@ -9,16 +9,14 @@ import 'widgets/index.dart';
 import 'plans_placeholder.dart';
 
 class PlansScreen extends StatelessWidget {
-
-  List plans = [];
-
   @override
   Widget build(BuildContext context) {
-    return Refreshable<List<Package>>(
-      fetcher: Heracles.of(context).fetchPackages,
+    return Refreshable<dynamic>(
+      fetcher: Heracles.of(context).getPurchased,
       onLoading: (context) => PlansPlaceholder(),
       onFailure: (context, exception) => PullToRetryPrompt(),
-      onSuccess: (context, properties) {
+      onSuccess: (context, plans) {
+        print(plans);
         return MagicContainer(
           body: [
             PlansHeader(showButton: plans.isNotEmpty),
@@ -30,4 +28,3 @@ class PlansScreen extends StatelessWidget {
     );
   }
 }
- 
