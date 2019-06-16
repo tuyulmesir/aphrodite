@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'account_tile.dart';
+import 'travel_friend_tile.dart';
 
-class AccountMenuList extends StatelessWidget {
-  final List<AccountTile> tiles;
+class TravelFriendMenuList extends StatelessWidget {
+  final List<TravelFriendTile> tiles;
 
-  const AccountMenuList({Key key, this.tiles}) : super(key: key);
+  const TravelFriendMenuList({Key key, this.tiles}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

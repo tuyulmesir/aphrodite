@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:magic_carpet/coconut_ivory/coconut_ivory.dart';
 
-class TravelFriendTile extends StatelessWidget {
+class TravelFriendTile extends StatefulWidget {
   static const Icon _defaultTrailing = Icon(Icons.chevron_right);
 
   final String text;
@@ -18,7 +18,15 @@ class TravelFriendTile extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _TravelFriendTileState createState() => _TravelFriendTileState();
+}
+
+class _TravelFriendTileState extends State<TravelFriendTile> {
+  bool isSelected = false;
+
+  @override
   Widget build(BuildContext context) {
+    print(isSelected);
     return Container(
       padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
       decoration: BoxDecoration(
@@ -36,14 +44,18 @@ class TravelFriendTile extends StatelessWidget {
         ],
       ),
       child: Material(
-        color: Colors.white,
+        color: isSelected ? Colors.blue : Colors.white,
         child: ListTile(
           title: Text(
-            text,
-            style: TextStyle(fontWeight: FontWeight.w600),
+            widget.text,
+            style: TextStyle(fontWeight: FontWeight.w600, color: isSelected ? Colors.white : Colors.black),
           ),
-          trailing: Icon(Icons.chevron_right),
-          onTap: () => onTap(context),
+          trailing: Icon(Icons.chevron_right, color: isSelected ? Colors.white : Colors.black),
+          onTap: () {
+            setState(() {
+              isSelected = !isSelected;
+            });
+          },
         ),
       ),
     );

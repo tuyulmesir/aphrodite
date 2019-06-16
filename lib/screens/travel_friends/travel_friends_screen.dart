@@ -21,6 +21,5 @@ class _TravelFriendsScreenState extends State<TravelFriendsScreen> {
         ],
       ),
     );
-    ;
   }
 }
