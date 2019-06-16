@@ -84,8 +84,6 @@ class _GenieScreenState extends State<GenieScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(step);
-
     return Scaffold(
       body: MagicContainer(
         body: <Widget>[

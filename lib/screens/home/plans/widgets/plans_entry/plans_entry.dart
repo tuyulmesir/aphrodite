@@ -24,7 +24,6 @@ class PlansEntry extends StatelessWidget {
   }
 
   Widget _showGenie(BuildContext context) {
-    print("boop");
     return Column(
       children: <Widget>[
         Padding(

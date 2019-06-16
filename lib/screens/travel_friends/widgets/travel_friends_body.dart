@@ -33,7 +33,6 @@ class _TravelFriendsBodyState extends State<TravelFriendsBody> {
   }
 
   Widget _showPlaceholder(BuildContext context) {
-    print("boop");
     return Column(
       children: <Widget>[
         Padding(

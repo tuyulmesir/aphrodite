@@ -26,7 +26,6 @@ class _TravelFriendTileState extends State<TravelFriendTile> {
 
   @override
   Widget build(BuildContext context) {
-    print(isSelected);
     return Container(
       padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
       decoration: BoxDecoration(
