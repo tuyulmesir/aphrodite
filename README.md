@@ -1,16 +1,9 @@
-# calo
+# Aphrodite
 
-Calo
+Aphrodite is a mobile front-end client for MagicCarpet built using Flutter.
 
-## Getting Started
+## Setting Up Dev Environment
 
-This project is a starting point for a Flutter application.
+Click the following to setup the pre-requisities for running the application: https://flutter.dev/docs/get-started/install
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+After installing the pre-requisites, run `flutter run` and all the package dependencies will be automatically fetched during build.
