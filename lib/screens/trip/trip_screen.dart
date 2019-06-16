@@ -24,8 +24,13 @@ class TripScreen extends StatelessWidget {
             children: <Widget>[
               TripHeader(),
               SizedBox(height: 20),
-              TripInfo(title: data['title'], description: data['description']),
-              SizedBox(height: 50),
+              TripInfo(
+                  title: data['title'],
+                  description: data['description'],
+                  nettPrice: data['nettPrice'],
+                  arrival: data['arrival']['price'],
+                  departure: data['departure']['price']),
+              SizedBox(height: 30),
               TripPackage(
                 data['arrival'],
                 data['departure'],
@@ -38,9 +43,5 @@ class TripScreen extends StatelessWidget {
         onFailure: (context, e) => Container(),
       ),
     );
-//      MagicContainer(
-//        body:
-//      ),
-//        );
   }
 }

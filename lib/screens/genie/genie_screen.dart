@@ -6,6 +6,7 @@ import 'package:magic_carpet/coconut_ivory/coconut_ivory.dart';
 import 'widgets/genie_header.dart';
 
 import 'widgets/steps/index.dart';
+import 'widgets/steps/summary_step.dart';
 
 class GenieScreen extends StatefulWidget {
   @override
@@ -62,8 +63,10 @@ class _GenieScreenState extends State<GenieScreen> {
       return BudgetStep(incrementStep: incrementStep, setBudget: setBudget);
     } else if (step == 3) {
       return DateStep(incrementStep: incrementStep, setDate: setDate);
-    } else {
+    } else if (step == 4) {
       return TripThemeStep(incrementStep: incrementStep, setThemes: setThemes);
+    } else {
+      return SummaryStep();
     }
   }
 
