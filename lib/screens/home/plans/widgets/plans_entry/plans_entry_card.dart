@@ -59,19 +59,12 @@ class PlansEntryCard extends StatelessWidget {
                                   Row(
                                     children: <Widget>[
                                       Expanded(
-                                        child: Text("My New Plan",
+                                        child: Text("Atta Halilintar: Bali Ashiap",
                                             style: TextStyle(
                                               color: ColorPalette.textGrey,
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold,
                                             )),
-                                      ),
-                                      Text(
-                                        "On Watchlist",
-                                        style: TextStyle(
-                                            color: Colors.red[700],
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w500),
                                       ),
                                     ],
                                   ),
@@ -92,7 +85,7 @@ class PlansEntryCard extends StatelessWidget {
                                     children: <Widget>[
                                       Text("Now only ",
                                           style: TextStyle(color: Colors.grey)),
-                                      Text("Rp 123.123.123",
+                                      Text("Rp 1.693.270",
                                           textAlign: TextAlign.right,
                                           style: TextStyle(
                                             color: Colors.blue,
@@ -123,7 +116,7 @@ class PlansEntryCard extends StatelessWidget {
                                             Icon(Icons.arrow_drop_down,
                                                 color: Colors.white, size: 14),
                                             Text(
-                                              "5%",
+                                              "0.5%",
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 12),
