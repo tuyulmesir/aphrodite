@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:magic_carpet/coconut_ivory/coconut_ivory.dart';
+import 'package:magic_carpet/services/heracles.dart';
 
 class DateStep extends StatefulWidget {
   final VoidCallback incrementStep;
@@ -18,6 +19,17 @@ class DateStep extends StatefulWidget {
 class _DateStepState extends State<DateStep> {
   String month;
   String date;
+
+  void incrementStep() {
+    DateTime dateTime =
+        DateTime(DateTime.now().year, int.parse(month), int.parse(date));
+    if (dateTime.isBefore(DateTime.now())) {
+      dateTime =
+          DateTime(DateTime.now().year + 1, int.parse(month), int.parse(date));
+    }
+    Heracles.of(context).setStart(dateTime);
+    widget.incrementStep();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +60,25 @@ class _DateStepState extends State<DateStep> {
                   month = value;
                 });
               },
-              dataSource: [
-                {
-                  "display": "June",
-                  "value": "6",
-                },
-              ],
+              dataSource: Iterable.generate(
+                  12,
+                  (i) => {
+                        'display': [
+                          'January',
+                          'February',
+                          'March',
+                          'April',
+                          'May',
+                          'June',
+                          'July',
+                          'August',
+                          'September',
+                          'October',
+                          'November',
+                          'December'
+                        ][i],
+                        'value': (i + 1).toString(),
+                      }).toList(),
               textField: 'display',
               valueField: 'value',
             ),
@@ -72,12 +97,12 @@ class _DateStepState extends State<DateStep> {
                   date = value;
                 });
               },
-              dataSource: [
-                {
-                  "display": "1",
-                  "value": "1",
-                },
-              ],
+              dataSource: Iterable.generate(
+                  31,
+                  (i) => {
+                        'display': (i + 1).toString(),
+                        'value': (i + 1).toString()
+                      }).toList(),
               textField: 'display',
               valueField: 'value',
             ),
@@ -86,8 +111,7 @@ class _DateStepState extends State<DateStep> {
           Center(
             child: MagicButton(
               text: "     Next     ",
-              callback:
-                  date != null && month != null ? widget.incrementStep : null,
+              callback: date != null && month != null ? incrementStep : null,
             ),
           )
         ],

@@ -3,6 +3,17 @@ import 'package:flutter/material.dart';
 import 'trip_package_card.dart';
 
 class TripPackage extends StatelessWidget {
+  final Map arrival;
+  final Map departure;
+  final Map accomodation;
+  final List experiences;
+  TripPackage(
+    this.arrival,
+    this.departure,
+    this.accomodation,
+    this.experiences,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,7 +36,16 @@ class TripPackage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          TripPackageCard(),
+          TripPackageCard(
+            title: arrival['planeId'],
+            description:
+                '${arrival['arrivalTime']}-${arrival['departureTime']}',
+          ),
+          TripPackageCard(
+            title: departure['planeId'],
+            description:
+                '${departure['arrivalTime']}-${departure['departureTime']}',
+          ),
           SizedBox(height: 20),
           Text(
             "Accomodation",
@@ -35,7 +55,9 @@ class TripPackage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          TripPackageCard(),
+          TripPackageCard(
+              title: accomodation['title'],
+              description: accomodation['description']),
           Text(
             "Experience",
             style: TextStyle(
@@ -44,8 +66,14 @@ class TripPackage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          TripPackageCard(),
-        ],
+        ]..addAll(
+            experiences.map(
+              (experience) => TripPackageCard(
+                    title: experience['title'],
+                    description: experience['description'],
+                  ),
+            ),
+          ),
       ),
     );
   }

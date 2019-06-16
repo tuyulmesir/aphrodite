@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 class TripHeader extends StatelessWidget {
   final bool showButton;
 
-  TripHeader({
-    this.showButton,
-  });
+  TripHeader({this.showButton});
 
   @override
   Widget build(BuildContext context) {

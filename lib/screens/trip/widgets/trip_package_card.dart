@@ -1,7 +1,17 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:magic_carpet/color_palette.dart';
 
 class TripPackageCard extends StatelessWidget {
+  final String title;
+  final String description;
+
+  const TripPackageCard({
+    Key key,
+    @required this.title,
+    @required this.description,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -36,7 +46,7 @@ class TripPackageCard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Package Entry",
+                                title,
                                 style: TextStyle(
                                   color: ColorPalette.textGrey,
                                   fontSize: 20,
@@ -47,7 +57,8 @@ class TripPackageCard extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Text(
-                                    "Description goes here",
+                                    description.substring(
+                                        0, min(46, description.length)),
                                     textAlign: TextAlign.right,
                                     style: TextStyle(
                                       color: ColorPalette.textGrey,

@@ -15,7 +15,7 @@ class GenieScreen extends StatefulWidget {
 class _GenieScreenState extends State<GenieScreen> {
   void incrementStep() {
     setState(() {
-      step = min(step + 1, 4);
+      step = min(step + 1, 5);
     });
   }
 
